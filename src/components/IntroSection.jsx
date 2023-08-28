@@ -1,29 +1,32 @@
+import wall from "../assets/images/wall.jpg";
+
 export default function IntroSection() {
   return (
-    <section className="bg-slate-200 h-screen">
-      <div className="flex justify-start items-end p-10 bg-white h-2/3 relative">
-        <h1 className="text-7xl uppercase fixed">It's time to start<br/>investing again.</h1>
-        <p className="right-6 z-10 fixed">DateTime</p>
+    <section className="w-full h-screen">
+      <div className="w-full h-2/3 relative">
+        <div className="w-full h-full" style={{ backgroundImage: `url(${wall})`, backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
+        <h1 className="text-7xl uppercase text-white">立足香港 . 背靠嶺南 . 眼向世界</h1>
       </div>
-      <div className="flex justify-between h-2/3">
-        <div className="flex items-end w-1/2 h-full bg-red-300 z-10">
-          <div className="flex justify-between items-end w-full p-6 bg-red-100">
+      <div className="flex justify-between h-1/3">
+        <div className="flex flex-col w-1/2 h-full bg-red-700 text-white">
+          <div className="flex justify-between items-start w-full h-1/2 p-6">
             <ul>
-              <li>head office</li>
-              <li>1500-1021</li>
-              <li>W Broadway St. Hong Kong</li>
+              <li>Head Office</li>
+              <li>1500 – 1021</li>
+              <li>W Broadway St, Hong Kong</li>
             </ul>
-            <ul>
-              <li>phone</li>
-              <li>1</li>
-              <li>+123456789</li>
-            </ul>
+            <p className="right-6">19:12:55</p>
+          </div>
+          <div className="flex justify-end items-end w-full h-1/2 p-6">
+            down arrow
           </div>
         </div>
-        <div className="flex items-end w-1/2 h-full bg-blue-300">
-          <div className="flex justify-end items-end w-full p-6 bg-blue-100">
-            contact@redbridge.com
-            </div>
+        <div className="flex justify-end w-1/2 h-full p-6 bg-amber-50">
+          <ul className="text-right">
+            <li>Contact</li>
+            <li>+(852) 5505 8831</li>
+            <li>contact@redbridge.com</li>
+          </ul>
         </div>
       </div>
     </section>
