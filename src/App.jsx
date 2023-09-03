@@ -3,12 +3,12 @@ import IntroSection from "./components/IntroSection"
 function App() {
 
   return (
-    <>
+    <div className="w-full h-screen overflow-y-auto overflow-x-hidden" style={{ perspective: '15px' }}>
       <IntroSection />
-      <section className="bg-yellow-100 h-screen pt-20">
-        <h1 className="text-5xl">Contact Red Bridge</h1>
-      </section>
-    </>
+      <footer className="bg-white w-full h-[1000px]">
+        foot
+      </footer>
+    </div>
   )
 }
 
