@@ -1,5 +1,6 @@
 import AboutSection from "./components/AboutSection"
 import ContactSection from "./components/ContactSection"
+import FooterSection from "./components/FooterSection"
 import IntroSection from "./components/IntroSection"
 
 function App() {
@@ -9,9 +10,7 @@ function App() {
       <IntroSection />
       <AboutSection />
       <ContactSection />
-      <footer className="bg-white w-full h-[1000px]">
-        foot
-      </footer>
+      <FooterSection />
     </div>
   )
 }
