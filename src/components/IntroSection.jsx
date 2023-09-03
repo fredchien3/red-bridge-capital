@@ -9,8 +9,8 @@ export default function IntroSection() {
         </div>
         <h1 className="absolute left-16 bottom-16 text-8xl uppercase text-white">立足香港 . 背靠嶺南 . 眼向世界</h1>
       </header>
-      <div className="flex justify-between h-1/3">
-        <aside className="flex flex-col w-1/2 h-full bg-red-700 text-white">
+      <div className="flex justify-between h-1/3 font-ss">
+        <aside className="flex flex-col w-1/2 h-full bg-maroon text-white">
           <div className="flex justify-between items-start w-full h-1/2 p-6">
             <ul>
               <li>Head Office</li>
@@ -23,7 +23,7 @@ export default function IntroSection() {
             down arrow
           </div>
         </aside>
-        <aside className="flex justify-end w-1/2 h-full p-6 bg-amber-50">
+        <aside className="flex justify-end w-1/2 h-full p-6 bg-beige">
           <ul className="text-right">
             <li>Contact</li>
             <li>+(852) 5505 8831</li>

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'AauxProRegular';
+  src: url(./assets/fonts/AauxProRegular.ttf);
+}
+
+@font-face {
+  font-family: 'AauxProMedium';
+  src: url(./assets/fonts/AauxProMedium.ttf);
+}
+
+@font-face {
+  font-family: 'NotoSerifMedium';
+  src: url(./assets/fonts/NotoSerifMedium.ttf);
+}
