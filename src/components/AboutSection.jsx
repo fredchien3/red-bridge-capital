@@ -2,7 +2,7 @@ import ifc from "../assets/images/ifc.jpg";
 
 export default function AboutSection() {
   return (
-    <section className="w-full h-screen relative flex -z-10" style={{ transformStyle: 'preserve-3d' }}>
+    <section id="about-section" className="w-full h-screen relative flex -z-10" style={{ transformStyle: 'preserve-3d' }}>
       <aside
         className="w-1/2 h-full object-cover -z-10"
         style={{ backgroundImage: `url(${ifc})`, backgroundPosition: 'center',

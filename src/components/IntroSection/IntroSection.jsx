@@ -1,7 +1,7 @@
-import wall from "../assets/images/wall.jpg";
+import wall from "../../assets/images/wall.jpg";
 import NavBar from "./NavBar";
 
-export default function IntroSection() {
+export default function IntroSection() {  
   return (
     <>
       <header className="w-full h-4/5 relative flex justify-center items-center -z-10" style={{ transformStyle: 'preserve-3d' }}>

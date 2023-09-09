@@ -1,10 +1,15 @@
 import { useState } from "react";
-import headerLogo from '../assets/icons/header_logo.png';
-import headerLogoBeige from '../assets/icons/header_logo_beige.png';
+import headerLogo from '../../assets/icons/header_logo.png';
+import headerLogoBeige from '../../assets/icons/header_logo_beige.png';
 
 export default function NavBar() {
   const [isHovered, setIsHovered] = useState(false);
-  
+
+  const scrollTo = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    section?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="absolute w-full flex justify-between p-10 top-0">
       <div
@@ -25,9 +30,23 @@ export default function NavBar() {
         />
       </div>
       <div className="flex justify-between w-1/5 text-maroon ">
-        <button className="hover:text-beige duration-300">关于</button>
-        <button className="hover:text-beige duration-300">联系</button>
-        <button className="hover:text-beige duration-300">En</button>
+        <button
+          className="hover:text-beige duration-300"
+          onClick={() => scrollTo("about-section")}
+        >
+          关于
+        </button>
+        <button
+          className="hover:text-beige duration-300"
+          onClick={() => scrollTo("contact-section")}
+        >
+          联系
+        </button>
+        <button
+          className="hover:text-beige duration-300"
+        >
+          En
+        </button>
       </div>
     </nav>
   )

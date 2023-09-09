@@ -1,7 +1,7 @@
 import AboutSection from "./components/AboutSection"
 import ContactSection from "./components/ContactSection"
 import FooterSection from "./components/FooterSection"
-import IntroSection from "./components/IntroSection"
+import IntroSection from "./components/IntroSection/IntroSection"
 
 function App() {
 
