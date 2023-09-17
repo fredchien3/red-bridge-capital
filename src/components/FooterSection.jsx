@@ -1,7 +1,12 @@
 import city from "../assets/images/city.jpg";
 import footerLogo from '../assets/icons/footer_logo.png';
+import arrowUp from "../assets/icons/arrow_up.png"
 
 export default function FooterSection() {
+  const scrollUp = () => {
+    document.getElementById("nav").scrollIntoView({ behavior: 'smooth' });
+  };
+  
   return (
     <>
       <section className="w-full h-[110vh] relative flex -z-10" style={{ transformStyle: 'preserve-3d' }}>
@@ -12,7 +17,12 @@ export default function FooterSection() {
         </div>
       </section>
       <footer className="w-full h-2/5 flex flex-col justify-between px-14 py-16 bg-jade text-beige text-xl">
-        <div className="flex justify-end">Back to top /\</div>
+        <div className="flex justify-end">
+            <div className="flex items-center" onClick={scrollUp}>
+              <p className="mr-4">Back to top</p>
+              <img src={arrowUp} className="floating-arrow" />
+            </div>
+        </div>
         <div className="flex justify-between items-end pb-7">
           <img src={footerLogo} alt="Red Bridge Capital logo" className="h-40 -mb-7" />
           <a

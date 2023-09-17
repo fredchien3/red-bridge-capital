@@ -11,7 +11,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="absolute w-full flex justify-between p-10 top-0">
+    <nav id="nav" className="absolute w-full flex justify-between p-10 top-0">
       <div
         className="relative h-10 hover:cursor-pointer"
         onMouseLeave={() => setIsHovered(false)}

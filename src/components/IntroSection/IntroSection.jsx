@@ -1,8 +1,13 @@
 import wall from "../../assets/images/wall.jpg";
 import Clock from "./Clock";
 import NavBar from "./NavBar";
+import arrowDown from "../../assets/icons/arrow_down.png"
 
 export default function IntroSection() {  
+  const scrollDown = () => {
+    document.getElementById("about-section").scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <header className="w-full h-4/5 relative flex justify-center items-center -z-10" style={{ transformStyle: 'preserve-3d' }}>
@@ -28,8 +33,8 @@ export default function IntroSection() {
             </a>
             <Clock />
           </div>
-          <div className="flex justify-end items-end w-full">
-            \/
+          <div className="flex justify-end items-end w-full relative">
+            <img src={arrowDown} className="floating-arrow" onClick={scrollDown} />
           </div>
         </aside>
         <aside className="flex justify-end w-1/2 h-full p-14 bg-beige">

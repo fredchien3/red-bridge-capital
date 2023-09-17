@@ -16,3 +16,19 @@
   font-family: 'NotoSerifMedium';
   src: url(./assets/fonts/NotoSerifMedium.ttf);
 }
+
+.floating-arrow { 
+  animation-name: float;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  height: 44px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@keyframes float {
+  0% { transform: translate(0,  -5px); }
+  50%  { transform: translate(0, 5px); }
+  100%   { transform: translate(0, -5px); }   
+}
