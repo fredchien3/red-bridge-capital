@@ -7,15 +7,33 @@ export default function ContactSection() {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita veritatis officiis in similique velit earum.
       </p>
       <div className="flex justify-between text-2xl">
-        <ul className="leading-none">
-          <li>Head Office</li>
-          <li>1500 – 1021</li>
-          <li>W Broadway St, Hong Kong</li>
-        </ul>
+        <a
+          href="#"
+          target="_blank"
+          className="leading-none hover:text-maroon duration-300"
+        >
+          Head Office<br />
+          1500 – 1021<br />
+          W Broadway St, Hong Kong
+        </a>
         <ul className="leading-none text-right">
-          <li>Contact</li>
-          <li>+(852) 5505 8831</li>
-          <li>contact@redbridgecapital.com</li>
+        <li>Contact</li>
+            <li>
+              <a href="tel:+85255058831"
+                target="_blank"
+                className="hover:text-maroon duration-300"
+              >
+                +(852) 5505 8831
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact@redbridgecapital.com"
+                target="_blank"
+                className="hover:text-maroon duration-300"
+              >
+                contact@redbridgecapital.com
+                </a>
+            </li>
         </ul>
       </div>
       <div className="flex justify-between items-end">

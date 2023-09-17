@@ -15,15 +15,33 @@ export default function FooterSection() {
         <div className="flex justify-end">Back to top /\</div>
         <div className="flex justify-between items-end pb-7">
           <img src={footerLogo} alt="Red Bridge Capital logo" className="h-40 -mb-7" />
+          <a
+            href="#"
+            target="_blank"
+            className="leading-none hover:text-maroon duration-300"
+          >
+            Head Office<br />
+            1500 – 1021<br />
+            W Broadway St, Hong Kong
+          </a>
           <ul className="leading-none">
-            <li>Head Office</li>
-            <li>1500 – 1021</li>
-            <li>W Broadway St, Hong Kong</li>
-          </ul>
-          <ul className="leading-none">
-            <li>Contact</li>
-            <li>+(852) 5505 8831</li>
-            <li>contact@redbridgecapital.com</li>
+          <li>Contact</li>
+            <li>
+              <a href="tel:+85255058831"
+                target="_blank"
+                className="hover:text-maroon duration-300"
+              >
+                +(852) 5505 8831
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact@redbridgecapital.com"
+                target="_blank"
+                className="hover:text-maroon duration-300"
+              >
+                contact@redbridgecapital.com
+                </a>
+            </li>
           </ul>
           <p>Copyright © 2023 Red Bridge Capital</p>
         </div>

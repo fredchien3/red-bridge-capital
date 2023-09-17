@@ -17,7 +17,11 @@ export default function IntroSection() {
       <section className="flex justify-between h-1/2 text-2xl">
         <aside className="flex flex-col justify-between w-1/2 h-full p-14 pr-16 bg-maroon text-white">
           <div className="flex justify-between items-end w-full">
-            <a href="#" className="leading-none hover:text-black duration-300">
+            <a
+              href="#"
+              target="_blank"
+              className="leading-none hover:text-black duration-300"
+            >
               Head Office<br />
               1500 – 1021<br />
               W Broadway St, Hong Kong
@@ -31,8 +35,22 @@ export default function IntroSection() {
         <aside className="flex justify-end w-1/2 h-full p-14 bg-beige">
           <ul className="leading-none text-right">
             <li>Contact</li>
-            <li>+(852) 5505 8831</li>
-            <li>contact@redbridgecapital.com</li>
+            <li>
+              <a href="tel:+85255058831"
+                target="_blank"
+                className="hover:text-maroon duration-300"
+              >
+                +(852) 5505 8831
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact@redbridgecapital.com"
+                target="_blank"
+                className="hover:text-maroon duration-300"
+              >
+                contact@redbridgecapital.com
+                </a>
+            </li>
           </ul>
         </aside>
       </section>
