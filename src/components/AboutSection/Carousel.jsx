@@ -2,30 +2,20 @@ import ifc from "../../assets/images/ifc.jpg";
 import clouds from "../../assets/images/clouds.jpg";
 import nubFull from "../../assets/icons/nub_full.png";
 import nubEmpty from "../../assets/icons/nub_empty.png";
-import { useState } from "react";
-import { ParallaxBanner } from "react-scroll-parallax";
+import { useEffect, useState } from "react";
+import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 
 export default function Carousel() {
   const images = [ifc, clouds];
   const [index, setIndex] = useState(0);
-  
-  const cycleIndex = (n = 1) => {
-    let newIndex = index + n;
-    if (n > 0) {
-      if (newIndex >= images.length) newIndex = 0;
-    } else if (newIndex < 0) {
-      newIndex = images.length - 1;
-    }
-    setIndex(newIndex);
-  }
-  
+   
   const [banners, nubs] = [[], []];
   for (let i = 0; i < images.length; i++) {
     const image = images[i];
     banners.push(
-      <ParallaxBanner
-        layers={[{ image: image, speed: -15 }]}
-        className={index == i ? "h-full absolute visible opacity-100 duration-500" : "h-full absolute hidden opacity-0 duration-500"}
+      <img
+        src={image}
+        className={"h-full w-full object-cover absolute duration-500 " + (index == i ? "visible opacity-100" : "invisible opacity-0")}
         key={image}
       />
     );
@@ -33,20 +23,33 @@ export default function Carousel() {
     nubs.push(
       <img
         src={index === i ? nubFull : nubEmpty}
-        className="ml-3"
-        onClick={() => setIndex(i)}
+        className="ml-3 z-10 cursor-pointer"
+        onClick={(e) => {
+          e.stopPropagation();
+          setIndex(i);
+        }}
         key={image}
       />
     );
   }
-      
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex(i => i == 0 ? 1 : 0);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [])
+  
   return (
-    <div
-      className="h-full w-1/2 cursor-pointer relative"
-      onClick={() => cycleIndex(1)}
-    >
-      {banners}
-        <div className="absolute z-10 top-8 right-[4.5rem] flex h-2">
+    <div className="h-full w-1/2 relative">
+      <Parallax
+        speed={-15}
+        className="h-full w-full relative"
+      >
+        {banners}
+      </Parallax>
+      <div className="absolute z-10 top-8 right-[4.5rem] flex h-2">
         {nubs}
       </div>
     </div>
