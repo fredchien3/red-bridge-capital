@@ -2,6 +2,7 @@ import wall from "../../assets/images/wall.jpg";
 import Clock from "./Clock";
 import NavBar from "./NavBar";
 import arrowDown from "../../assets/icons/arrow_down.png"
+import { ParallaxBanner } from "react-scroll-parallax";
 
 export default function IntroSection() {  
   const scrollDown = () => {
@@ -10,17 +11,17 @@ export default function IntroSection() {
 
   return (
     <>
-      <header className="w-full h-4/5 relative flex justify-center items-center -z-10" style={{ transformStyle: 'preserve-3d' }}>
+      <header className="w-full h-4/5 flex justify-center items-center relative">
         <NavBar />
-        <div
-          className="w-full h-full absolute object-cover -z-10"
-          style={{ backgroundImage: `url(${wall})`, backgroundPosition: '50% 50%',
-          backgroundSize: 'cover', transform: 'translateZ(-5px) scale(1.5)'}}>
-        </div>
-        <h1 className="absolute left-16 bottom-16 text-8xl uppercase text-white">立足香港 . 背靠嶺南 . 眼向世界</h1>
+        <ParallaxBanner
+          layers={[{ image: wall, speed: -15 }]}
+          className="w-full h-full absolute object-cover"
+        >
+          <h1 className="absolute left-16 bottom-16 text-8xl uppercase text-white">立足香港 . 背靠嶺南 . 眼向世界</h1>
+        </ParallaxBanner>
       </header>
       <section className="flex justify-between h-1/2 text-2xl">
-        <aside className="flex flex-col justify-between w-1/2 h-full p-14 pr-16 bg-maroon text-white z-10 overflow-hidden">
+        <aside className="flex flex-col justify-between w-1/2 h-full p-14 pr-16 bg-maroon text-white z-10">
           <div className="flex justify-between items-end w-full">
             <a
               href="#"

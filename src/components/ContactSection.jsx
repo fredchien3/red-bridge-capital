@@ -2,7 +2,7 @@ import bridgeBeige from '../assets/icons/bridge_beige.png';
 
 export default function ContactSection() {
   return (
-    <section id="contact-section" className="w-full h-5/6 relative flex flex-col justify-between bg-slate text-beige p-14 overflow-hidden">
+    <section id="contact-section" className="w-full h-5/6 relative flex flex-col justify-between bg-slate text-beige p-14">
       <p className="w-1/3 text-xl">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita veritatis officiis in similique velit earum.
       </p>

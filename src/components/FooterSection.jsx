@@ -1,6 +1,7 @@
 import city from "../assets/images/city.jpg";
 import footerLogo from '../assets/icons/footer_logo.png';
 import arrowUp from "../assets/icons/arrow_up.png"
+import { ParallaxBanner } from "react-scroll-parallax";
 
 export default function FooterSection() {
   const scrollUp = () => {
@@ -9,12 +10,11 @@ export default function FooterSection() {
   
   return (
     <>
-      <section className="w-full h-[110vh] relative flex -z-10" style={{ transformStyle: 'preserve-3d' }}>
-        <div
-          className="w-full h-full object-cover -z-10"
-          style={{ backgroundImage: `url(${city})`, backgroundPosition: '75% 80%',
-          backgroundSize: 'cover', transform: 'translateZ(-8px) scale(1.6)'}}>
-        </div>
+      <section className="w-full h-[110vh] relative flex -z-10">
+        <ParallaxBanner 
+          layers={[{ image: city, speed: -15 }]}
+          className="h-full"
+        />
       </section>
       <footer className="w-full h-2/5 flex flex-col justify-between px-14 py-16 bg-jade text-beige text-xl">
         <div className="flex justify-end">
