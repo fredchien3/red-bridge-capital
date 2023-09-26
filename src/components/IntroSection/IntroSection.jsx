@@ -20,7 +20,7 @@ export default function IntroSection() {
         <h1 className="absolute left-16 bottom-16 text-8xl uppercase text-white">立足香港 . 背靠嶺南 . 眼向世界</h1>
       </header>
       <section className="flex justify-between h-1/2 text-2xl">
-        <aside className="flex flex-col justify-between w-1/2 h-full p-14 pr-16 bg-maroon text-white">
+        <aside className="flex flex-col justify-between w-1/2 h-full p-14 pr-16 bg-maroon text-white z-10 overflow-hidden">
           <div className="flex justify-between items-end w-full">
             <a
               href="#"
@@ -37,7 +37,7 @@ export default function IntroSection() {
             <img src={arrowDown} className="floating-arrow" onClick={scrollDown} />
           </div>
         </aside>
-        <aside className="flex justify-end w-1/2 h-full p-14 bg-beige">
+        <aside className="flex justify-end w-1/2 h-full p-14 bg-beige z-10">
           <ul className="leading-none text-right">
             <li>Contact</li>
             <li>

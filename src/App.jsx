@@ -1,4 +1,4 @@
-import AboutSection from "./components/AboutSection"
+import AboutSection from "./components/AboutSection/AboutSection"
 import ContactSection from "./components/ContactSection"
 import FooterSection from "./components/FooterSection"
 import IntroSection from "./components/IntroSection/IntroSection"
