@@ -10,7 +10,7 @@ export default function FooterSection() {
   
   return (
     <>
-      <section className="w-full h-[110vh] relative flex -z-10">
+      <section className="w-full h-[95vh] relative flex -z-10">
         <ParallaxBanner 
           layers={[{ image: city, speed: -15 }]}
           className="h-full"
