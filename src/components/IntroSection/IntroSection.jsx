@@ -3,8 +3,22 @@ import Clock from "./Clock";
 import NavBar from "./NavBar";
 import arrowDown from "../../assets/icons/arrow_down.png"
 import { ParallaxBanner } from "react-scroll-parallax";
+import { useContext } from "react";
+import { LanguageContext } from "../../App";
 
-export default function IntroSection() {  
+export default function IntroSection({ toggleLanguage }) {
+  const language = useContext(LanguageContext);
+
+  let heroText = "立足香港 . 背靠嶺南 . 眼向世界";
+
+  if (language == 1) {
+    heroText = <>
+      BASED IN HONG KONG,<br/>
+      OUR GLOBAL EXPANSION STEMS<br/>
+      FROM DEEP ROOTS IN CHINA.
+    </>
+  }
+
   const scrollDown = () => {
     document.getElementById("about-section").scrollIntoView({ behavior: 'smooth' });
   };
@@ -12,12 +26,14 @@ export default function IntroSection() {
   return (
     <>
       <header className="w-full h-4/5 flex justify-center items-center relative">
-        <NavBar />
+        <NavBar toggleLanguage={toggleLanguage}/>
         <ParallaxBanner
           layers={[{ image: wall, speed: -15 }]}
           className="w-full h-full absolute object-cover"
         >
-          <h1 className="absolute left-16 bottom-16 text-8xl uppercase text-white">立足香港 . 背靠嶺南 . 眼向世界</h1>
+          <h1 className="absolute left-16 bottom-16 text-8xl uppercase text-white">
+            {heroText}
+          </h1>
         </ParallaxBanner>
       </header>
       <section className="flex justify-between h-1/2 text-2xl">

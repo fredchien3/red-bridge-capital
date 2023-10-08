@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import headerLogo from '../../assets/icons/header_logo.png';
 import headerLogoBeige from '../../assets/icons/header_logo_beige.png';
+import { LanguageContext } from "../../App";
 
-export default function NavBar() {
+export default function NavBar({ toggleLanguage }) {
+  const language = useContext(LanguageContext);
   const [isHovered, setIsHovered] = useState(false);
 
   const scrollTo = (sectionId) => {
@@ -29,23 +31,25 @@ export default function NavBar() {
           style={{ opacity: isHovered ? 1 : 0 }}
         />
       </div>
-      <div className="flex justify-between w-1/5 text-maroon ">
+      <div className="flex justify-between w-1/5 text-maroon">
         <button
-          className="hover:text-beige duration-300"
+          className="hover:text-beige duration-300 uppercase"
           onClick={() => scrollTo("about-section")}
         >
-          关于
+          {language == 0 ? "关于" : "About"}
         </button>
         <button
-          className="hover:text-beige duration-300"
+          className="hover:text-beige duration-300 uppercase"
           onClick={() => scrollTo("contact-section")}
         >
-          联系
+          
+          {language == 0 ? "联系" : "Contact"}
         </button>
         <button
-          className="hover:text-beige duration-300"
+          className="hover:text-beige duration-300 uppercase"
+          onClick={toggleLanguage}
         >
-          En
+          {language == 0 ? "EN" : "中文"}
         </button>
       </div>
     </nav>
