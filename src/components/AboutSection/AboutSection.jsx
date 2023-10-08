@@ -2,7 +2,7 @@ import Carousel from "./Carousel";
 
 export default function AboutSection() {
   return (
-    <section id="about-section" className="w-full h-[95vh] flex justify-between relative">
+    <section id="about-section" className="w-full h-full flex justify-between relative">
       <Carousel />
       <aside className="w-1/2 h-full bg-white flex flex-col pl-20 pb-14 justify-end text-slate">
         <h1 className="font-ssm uppercase text-8xl mb-12">About<br />Red Bridge</h1>

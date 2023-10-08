@@ -8,6 +8,7 @@ export default function IntroAnimation() {
   const [animationState, setAnimationState] = useState(0);
   
   useEffect(() => {
+    document.body.classList.add("noscroll");
     lottieRef.current.setSpeed(1.3);
     setTimeout(() => {
       setAnimationState(1);
