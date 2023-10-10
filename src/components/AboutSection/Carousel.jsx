@@ -15,7 +15,7 @@ export default function Carousel() {
     banners.push(
       <img
         src={image}
-        className={"h-full w-full object-cover absolute duration-500 " + (index == i ? "visible opacity-100" : "invisible opacity-0")}
+        className={"h-full w-full object-cover absolute duration-500 " + (index === i ? "visible opacity-100" : "invisible opacity-0")}
         key={image}
       />
     );
@@ -35,7 +35,7 @@ export default function Carousel() {
   
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex(i => i == 0 ? 1 : 0);
+      setIndex(i => i === 0 ? 1 : 0);
     }, 10000);
 
     return () => clearInterval(interval);

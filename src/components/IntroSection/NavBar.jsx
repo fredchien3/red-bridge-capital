@@ -36,20 +36,20 @@ export default function NavBar({ toggleLanguage }) {
           className="hover:text-beige duration-300 uppercase"
           onClick={() => scrollTo("about-section")}
         >
-          {language == 0 ? "关于" : "About"}
+          {language === 0 ? "关于" : "About"}
         </button>
         <button
           className="hover:text-beige duration-300 uppercase"
           onClick={() => scrollTo("contact-section")}
         >
           
-          {language == 0 ? "联系" : "Contact"}
+          {language === 0 ? "联系" : "Contact"}
         </button>
         <button
           className="hover:text-beige duration-300 uppercase"
           onClick={toggleLanguage}
         >
-          {language == 0 ? "EN" : "中文"}
+          {language === 0 ? "EN" : "中文"}
         </button>
       </div>
     </nav>
