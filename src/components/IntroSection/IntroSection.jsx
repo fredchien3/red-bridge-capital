@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../../App";
 
 export default function IntroSection({ toggleLanguage }) {
-  const language = useContext(LanguageContext);
+  const { language, isChangingLanguage } = useContext(LanguageContext);
 
   let heroText = "立足香港 . 背靠嶺南 . 眼向世界";
 
@@ -31,7 +31,8 @@ export default function IntroSection({ toggleLanguage }) {
           layers={[{ image: wall, speed: -15 }]}
           className="w-full h-full absolute object-cover"
         >
-          <h1 className="absolute left-16 bottom-16 text-8xl uppercase text-white">
+          <h1 className={`absolute left-16 bottom-16 text-8xl uppercase text-white duration-500 ease-in-out
+          ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
             {heroText}
           </h1>
         </ParallaxBanner>
