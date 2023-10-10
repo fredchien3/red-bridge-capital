@@ -11,7 +11,7 @@ export default function IntroSection({ toggleLanguage }) {
 
   let heroText = "立足香港 . 背靠嶺南 . 眼向世界";
 
-  if (language == 1) {
+  if (language === 1) {
     heroText = <>
       BASED IN HONG KONG,<br/>
       OUR GLOBAL EXPANSION STEMS<br/>
