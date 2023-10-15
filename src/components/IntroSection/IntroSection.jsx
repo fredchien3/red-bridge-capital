@@ -12,11 +12,7 @@ export default function IntroSection({ toggleLanguage }) {
   let heroText = "立足香港 . 背靠嶺南 . 眼向世界";
 
   if (language === 1) {
-    heroText = <>
-      BASED IN HONG KONG,<br/>
-      OUR GLOBAL EXPANSION STEMS<br/>
-      FROM DEEP ROOTS IN CHINA.
-    </>
+    heroText = "BASED IN HONG KONG, OUR GLOBAL EXPANSION STEMS FROM DEEP ROOTS IN CHINA.";
   }
 
   const scrollDown = () => {
@@ -31,37 +27,43 @@ export default function IntroSection({ toggleLanguage }) {
           layers={[{ image: wall, speed: -15 }]}
           className="w-full h-full absolute object-cover"
         >
-          <h1 className={`absolute left-16 bottom-16 text-8xl uppercase text-white duration-500 ease-in-out
+          {/* 
+          md:w-[45rem] md:text-5xl md:left-16 md:bottom-16
+          xl:w-[55rem] xl:text-6xl */}
+          <h1 className={`absolute uppercase text-white transition-opacity duration-500 ease-in-out
+          w-[60vw] text-[5vw] left-[3vw] bottom-[3vw] leading-none
+          sm:w-[80vw]
           ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
             {heroText}
           </h1>
         </ParallaxBanner>
       </header>
-      <section className="flex justify-between h-1/2 text-2xl">
-        <aside className="flex flex-col justify-between w-1/2 h-full p-14 pr-16 bg-maroon text-white z-10">
-          <div className="flex justify-between items-end w-full">
+      <section className="flex justify-between h-2/5 sm:h-1/2 text-[3vw] md:text-[2.5vw] xl:text-[1.5vw]">
+        <aside className="flex flex-col justify-between w-1/2 h-full p-[4vw] bg-maroon text-white z-10">
+          <div className="relative flex flex-col justify-between items-start h-full w-full
+          md:flex-row md:h-auto md:items-end">
             <a
               href="#"
               target="_blank"
-              className="leading-none hover:text-black duration-300"
+              className="leading-none hover:text-black transition-colors duration-300"
             >
               Head Office<br />
               1500 – 1021<br />
               W Broadway St, Hong Kong
             </a>
-            <Clock />
+            <Clock className="text-4xl absolute bottom-[-2.1rem] md:relative md:text-[2.5vw] md:-bottom-2 xl:text-[1.5vw]" />
           </div>
           <div className="flex justify-end items-end w-full relative">
-            <img src={arrowDown} className="floating-arrow" onClick={scrollDown} />
+            <img src={arrowDown} className="floating-arrow h-8 md:h-11" onClick={scrollDown} />
           </div>
         </aside>
-        <aside className="flex justify-end w-1/2 h-full p-14 bg-beige z-10">
+        <aside className="flex justify-end w-1/2 h-full p-[4vw] bg-beige z-10">
           <ul className="leading-none text-right">
             <li>Contact</li>
             <li>
               <a href="tel:+85255058831"
                 target="_blank"
-                className="hover:text-maroon duration-300"
+                className="hover:text-maroon transition-colors duration-300"
               >
                 +(852) 5505 8831
               </a>
@@ -69,7 +71,7 @@ export default function IntroSection({ toggleLanguage }) {
             <li>
               <a href="mailto:contact@redbridgecapital.com"
                 target="_blank"
-                className="hover:text-maroon duration-300"
+                className="hover:text-maroon transition-colors duration-300"
               >
                 contact@redbridgecapital.com
                 </a>

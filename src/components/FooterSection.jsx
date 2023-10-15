@@ -20,7 +20,7 @@ export default function FooterSection() {
         <div className="flex justify-end">
             <div className="flex items-center" onClick={scrollUp}>
               <p className="mr-4">Back to top</p>
-              <img src={arrowUp} className="floating-arrow" />
+              <img src={arrowUp} className="floating-arrow h-11" />
             </div>
         </div>
         <div className="flex justify-between items-end pb-7">

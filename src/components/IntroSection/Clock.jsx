@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Clock() {
+export default function Clock({ className }) {
   const [date, setDate] = useState("");
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Clock() {
   }, []);
   
   return (
-    <p>
+    <p className={className}>
       {date}
     </p>
   )

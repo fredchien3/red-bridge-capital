@@ -22,7 +22,6 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  height: 44px;
   cursor: pointer;
   z-index: 10;
 }
