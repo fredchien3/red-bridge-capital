@@ -42,10 +42,12 @@ export default function Carousel() {
   }, [])
   
   return (
-    <div className="h-full w-1/2 relative">
+    <div id="parcon" className="h-72 w-full md:h-full md:w-1/2 relative -z-30 bg-pink-200">
       <Parallax
         speed={-15}
+        scale={[1.5, 1.5]}
         className="h-full w-full relative"
+        id="parban"
       >
         {banners}
       </Parallax>

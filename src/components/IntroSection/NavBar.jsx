@@ -13,7 +13,7 @@ export default function NavBar({ toggleLanguage }) {
   };
 
   return (
-    <nav id="nav" className="absolute w-full flex justify-between p-10 top-0 z-10">
+    <nav id="nav" className="absolute w-full flex justify-between p-10 top-0 z-20">
       <div
         className="relative h-10 hover:cursor-pointer"
         onMouseLeave={() => setIsHovered(false)}

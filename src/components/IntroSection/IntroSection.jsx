@@ -25,7 +25,7 @@ export default function IntroSection({ toggleLanguage }) {
         <NavBar toggleLanguage={toggleLanguage}/>
         <ParallaxBanner
           layers={[{ image: wall, speed: -15 }]}
-          className="w-full h-full absolute object-cover"
+          className="w-full h-full absolute object-cover z-10"
         >
           {/* 
           md:w-[45rem] md:text-5xl md:left-16 md:bottom-16
@@ -39,7 +39,7 @@ export default function IntroSection({ toggleLanguage }) {
         </ParallaxBanner>
       </header>
       <section className="flex justify-between h-2/5 sm:h-1/2 text-[3vw] md:text-[2.5vw] xl:text-[1.5vw]">
-        <aside className="flex flex-col justify-between w-1/2 h-full p-[4vw] bg-maroon text-white z-10">
+        <aside className="flex flex-col justify-between w-1/2 h-full p-[4vw] bg-maroon text-white z-20">
           <div className="relative flex flex-col justify-between items-start h-full w-full
           md:flex-row md:h-auto md:items-end">
             <a
@@ -57,7 +57,7 @@ export default function IntroSection({ toggleLanguage }) {
             <img src={arrowDown} className="floating-arrow h-8 md:h-11" onClick={scrollDown} />
           </div>
         </aside>
-        <aside className="flex justify-end w-1/2 h-full p-[4vw] bg-beige z-10">
+        <aside className="flex justify-end w-1/2 h-full p-[4vw] bg-beige z-20">
           <ul className="leading-none text-right">
             <li>Contact</li>
             <li>
