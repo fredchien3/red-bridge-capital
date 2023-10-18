@@ -51,7 +51,7 @@ export default function IntroSection({ toggleLanguage }) {
             <Clock className="text-4xl absolute bottom-[-2.1rem] md:relative md:text-[2.5vw] md:-bottom-2 xl:text-[1.5vw]" />
           </div>
           <div className="flex justify-end items-end w-full relative">
-            <img src={arrowDown} className="floating-arrow h-8 md:h-11" onClick={scrollDown} />
+            <img src={arrowDown} className="floating-arrow h-7 sm:h-11" onClick={scrollDown} />
           </div>
         </aside>
         <aside className="flex justify-end w-1/2 h-full p-[4vw] bg-beige z-20">
