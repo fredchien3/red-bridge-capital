@@ -21,15 +21,12 @@ export default function IntroSection({ toggleLanguage }) {
 
   return (
     <>
-      <header className="w-full h-4/5 flex justify-center items-center relative">
+      <header className="w-full h-[70%] flex justify-center items-center relative">
         <NavBar toggleLanguage={toggleLanguage}/>
         <ParallaxBanner
           layers={[{ image: wall, speed: -15 }]}
           className="w-full h-full absolute object-cover z-10"
         >
-          {/* 
-          md:w-[45rem] md:text-5xl md:left-16 md:bottom-16
-          xl:w-[55rem] xl:text-6xl */}
           <h1 className={`absolute uppercase text-white transition-opacity duration-500 ease-in-out
           w-[60vw] text-[5vw] left-[3vw] bottom-[3vw] leading-none
           sm:w-[80vw]
@@ -38,7 +35,7 @@ export default function IntroSection({ toggleLanguage }) {
           </h1>
         </ParallaxBanner>
       </header>
-      <section className="flex justify-between h-2/5 sm:h-1/2 text-[3vw] md:text-[2.5vw] xl:text-[1.5vw]">
+      <section className="flex justify-between h-[28%] sm:h-1/2 text-[3vw] md:text-[2.5vw] xl:text-[1.5vw]">
         <aside className="flex flex-col justify-between w-1/2 h-full p-[4vw] bg-maroon text-white z-20">
           <div className="relative flex flex-col justify-between items-start h-full w-full
           md:flex-row md:h-auto md:items-end">
