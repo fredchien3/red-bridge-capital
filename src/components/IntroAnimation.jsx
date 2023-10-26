@@ -37,7 +37,7 @@ export default function IntroAnimation() {
       lottieRef={lottieRef}
       animationData={introAnimation}
       loop={false}
-      className={`w-full h-screen fixed z-50 transition duration-1000 noscroll
+      className={`w-full h-screen fixed z-50 duration-1000 noscroll
       ${animationClass}`}
     />
   );
