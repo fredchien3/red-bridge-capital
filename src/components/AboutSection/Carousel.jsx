@@ -42,7 +42,7 @@ export default function Carousel() {
   }, [])
   
   return (
-    <div id="parcon" className="h-64 w-full md:h-full md:w-1/2 relative -z-30 overflow-hidden">
+    <div className="h-72 w-full sm:h-96 md:h-full md:w-1/2 relative -z-30 overflow-hidden">
       <Parallax
         speed={-15}
         scale={[1.5, 1.5]}

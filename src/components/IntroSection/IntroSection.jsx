@@ -28,8 +28,7 @@ export default function IntroSection({ toggleLanguage }) {
           className="w-full h-full absolute object-cover z-10"
         >
           <h1 className={`absolute uppercase text-white transition-opacity duration-500 ease-in-out
-          w-[60vw] text-[5vw] left-[3vw] bottom-[3vw] leading-none
-          sm:w-[80vw]
+          w-[60vw] sm:w-[80vw] text-[5vw] left-[3vw] bottom-[3vw] leading-none
           ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
             {heroText}
           </h1>
