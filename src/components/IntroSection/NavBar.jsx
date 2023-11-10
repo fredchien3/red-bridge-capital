@@ -4,6 +4,7 @@ import headerLogoBeige from '../../assets/icons/header_logo_beige.png';
 import { LanguageContext } from "../../App";
 import navPlus from '../../assets/icons/nav_plus.png';
 import navMinus from '../../assets/icons/nav_minus.png';
+import Clock from "./Clock";
 
 export default function NavBar({ toggleLanguage }) {
   const { language, isChangingLanguage } = useContext(LanguageContext);
@@ -97,10 +98,40 @@ export default function NavBar({ toggleLanguage }) {
         </div>}
       </div>
       {<div
-        className="transition-opacity duration-200 ease-in-out bg-yellow-800"
-        style={{ opacity: showMenu ? 1 : 0 }}
+        className="flex flex-col justify-end p-8 transition-opacity duration-300 ease-in-out h-[90%]"
+        style={{ opacity: showMenu ? 1 : 0, visibility: showMenu ? "visible" : "hidden" }}
       >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam tempore temporibus in, praesentium cum nisi dolorum voluptatibus suscipit unde.
+          <div
+            className={`text-6xl text-beige cursor-pointer mb-16 border
+            hover:text-black duration-300 uppercase
+            ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
+            onClick={() => {
+              scrollTo("about-section");
+              setMenu(false);
+            }}
+          >
+            {language === 0 ? "关于" : "About Red Bridge"}
+          </div>
+          <div
+            className={`text-6xl text-beige cursor-pointer mb-16 border
+            hover:text-black duration-300 uppercase
+            ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
+            onClick={() => {
+              scrollTo("contact-section");
+              setMenu(false);
+            }}
+          >
+            {language === 0 ? "联系" : "Contact Red Bridge"}
+          </div>
+          <div
+            className={`text-6xl text-beige cursor-pointer mb-16 border
+            hover:text-black duration-300 uppercase
+            ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
+            onClick={toggleLanguage}
+          >
+            {language === 0 ? "EN" : "中文"}
+          </div>
+          <Clock className="text-4xl text-beige" />
       </div>}
     </nav>
   )
