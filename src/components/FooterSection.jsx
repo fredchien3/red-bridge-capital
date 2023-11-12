@@ -32,28 +32,26 @@ export default function FooterSection() {
               target="_blank"
               className="leading-none hover:text-maroon duration-300"
             >
-              Head Office<br />
-              1500 – 1021<br />
-              W Broadway St, Hong Kong
+              190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands
             </a>
           </aside>
           <aside className="flex justify-between flex-col h-[30vw] lg:h-auto lg:flex-row items-end">
             <ul className="text-right lg:text-left leading-none lg:mr-[8vw] 2xl:mr-[12vw]">
               <li>Contact</li>
               <li>
-                <a href="tel:+85255058831"
+                <a href="tel:+85234695185"
                   target="_blank"
                   className="hover:text-maroon duration-300"
                 >
-                  +(852) 5505 8831
+                  +(852) 3469 5185
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@redbridgecapital.com"
+                <a href="mailto:admin@redbridgecapital.com"
                   target="_blank"
                   className="hover:text-maroon duration-300"
                 >
-                  contact@redbridgecapital.com
+                  admin@redbridgecapital.com
                   </a>
               </li>
             </ul>

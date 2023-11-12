@@ -38,15 +38,27 @@ export default function IntroSection({ toggleLanguage }) {
         <aside className="flex flex-col justify-between w-1/2 h-full p-[4vw] bg-maroon text-white z-20">
           <div className="relative flex flex-col justify-between items-start h-full w-full
           md:flex-row md:h-auto md:items-end">
-            <a
-              href="#"
-              target="_blank"
-              className="leading-none hover:text-black transition-colors duration-300"
-            >
-              Head Office<br />
-              1500 – 1021<br />
-              W Broadway St, Hong Kong
-            </a>
+            <div className="flex flex-col">
+              <a
+                href="#"
+                target="_blank"
+                className="leading-none hover:text-maroon duration-300"
+              >
+                Hong Kong Office<br />
+                Suites 1901,<br />
+                Level 19, Cheung Kong Center,<br />
+                2 Queen’s Road Central, Central, Hong Kong<br />
+              </a>
+              <br />
+              <a
+                href="#"
+                target="_blank"
+                className="leading-none hover:text-maroon duration-300"
+              >
+                Cayman Office<br />
+                190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands
+              </a>
+            </div>
             <Clock className="text-4xl absolute bottom-[-2.1rem] md:relative md:text-[2.5vw] md:-bottom-2 xl:text-[1.5vw]" />
           </div>
           <div className="flex justify-end items-end w-full relative">
@@ -57,19 +69,19 @@ export default function IntroSection({ toggleLanguage }) {
           <ul className="leading-none text-right">
             <li>Contact</li>
             <li>
-              <a href="tel:+85255058831"
+              <a href="tel:+85234695185"
                 target="_blank"
                 className="hover:text-maroon transition-colors duration-300"
               >
-                +(852) 5505 8831
+                +(852) 3469 5185
               </a>
             </li>
             <li>
-              <a href="mailto:contact@redbridgecapital.com"
+              <a href="mailto:admin@redbridgecapital.com"
                 target="_blank"
                 className="hover:text-maroon transition-colors duration-300"
               >
-                contact@redbridgecapital.com
+                admin@redbridgecapital.com
                 </a>
             </li>
           </ul>
