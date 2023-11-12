@@ -42,7 +42,7 @@ export default function IntroSection({ toggleLanguage }) {
               <a
                 href="#"
                 target="_blank"
-                className="leading-none hover:text-maroon duration-300"
+                className="leading-none hover:text-black duration-300"
               >
                 Hong Kong Office<br />
                 Suites 1901,<br />
@@ -53,7 +53,7 @@ export default function IntroSection({ toggleLanguage }) {
               <a
                 href="#"
                 target="_blank"
-                className="leading-none hover:text-maroon duration-300"
+                className="leading-none hover:text-black duration-300"
               >
                 Cayman Office<br />
                 190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands

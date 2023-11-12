@@ -10,7 +10,7 @@ export default function FooterSection() {
   
   return (
     <>
-      <section className="w-full h-72 sm:h-96 md:h-[95vh] relative flex z-10">
+      <section className="w-full h-96 md:h-[95vh] relative flex z-10">
         <ParallaxBanner 
           layers={[{ image: city, speed: -15 }]}
           className="h-full"
@@ -32,7 +32,8 @@ export default function FooterSection() {
               target="_blank"
               className="leading-none hover:text-maroon duration-300"
             >
-              190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands
+              <br />
+              190 Eigin Avenue, George Town,<br />Grand Cayman KY1-9008, Cayman Islands
             </a>
           </aside>
           <aside className="flex justify-between flex-col h-[30vw] lg:h-auto lg:flex-row items-end">
@@ -55,7 +56,7 @@ export default function FooterSection() {
                   </a>
               </li>
             </ul>
-            <p>Copyright © 2023 Red Bridge Capital</p>
+            <p>Copyright © 2023<br />Red Bridge Capital</p>
           </aside>
         </div>
       </footer>
