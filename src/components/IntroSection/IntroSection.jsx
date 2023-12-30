@@ -6,14 +6,31 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import { useContext } from "react";
 import { LanguageContext } from "../../App";
 
-export default function IntroSection({ toggleLanguage }) {
-  const { language, isChangingLanguage } = useContext(LanguageContext);
-
-  let heroText = "立足香港 . 背靠嶺南 . 眼向世界";
-
-  if (language === 1) {
-    heroText = "BASED IN HONG KONG, OUR GLOBAL EXPANSION STEMS FROM DEEP ROOTS IN CHINA.";
+const displayText = {
+  hero: {
+    0: "Based in Hong Kong,\nour global expansion\nstems from deep roots in China.",
+    1: "立足香港 , 背靠岭南 , 眼向世界",
+    2: "立足香港 , 背靠嶺南 , 眼向世界"
+  },
+  hongKongAddress: {
+    0: "Hong Kong Office\nSuites 1901,\nLevel 19, Cheung Kong Center,\n2 Queen’s Road Central, Central, Hong Kong",
+    1: "香港办公室\n香港中环皇后大道中2号长江集团中心19楼1901室",
+    2: "香港辦公室\n香港中環皇后大道中2號長江集團中心19樓1901室"
+  },
+  caymanAddress: {
+    0: "Cayman Office\n190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands",
+    1: "开曼群岛办公室\n190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands",
+    2: "開曼群島辦公室\n190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands"
+  },
+  contact: {
+    0: "Contact",
+    1: "联系",
+    2: "聯繫"
   }
+}
+
+export default function IntroSection() {
+  const { language, isChangingLanguage } = useContext(LanguageContext);
 
   const scrollDown = () => {
     document.getElementById("about-section").scrollIntoView({ behavior: 'smooth' });
@@ -22,15 +39,15 @@ export default function IntroSection({ toggleLanguage }) {
   return (
     <>
       <header className="w-full h-[70%] flex justify-center items-center relative">
-        <NavBar toggleLanguage={toggleLanguage}/>
+        <NavBar />
         <ParallaxBanner
           layers={[{ image: wall, speed: -15 }]}
           className="w-full h-full absolute object-cover z-10"
         >
-          <h1 className={`absolute uppercase text-white transition-opacity duration-500 ease-in-out
-          w-[60vw] sm:w-[80vw] text-[5vw] left-[3vw] bottom-[3vw] leading-none
+          <h1 className={`absolute uppercase text-white transition-opacity duration-300 ease-in-out
+          text-[5vw] left-[3vw] bottom-[3vw] leading-none whitespace-pre-wrap
           ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
-            {heroText}
+            {displayText["hero"][language]}
           </h1>
         </ParallaxBanner>
       </header>
@@ -42,21 +59,17 @@ export default function IntroSection({ toggleLanguage }) {
               <a
                 href="#"
                 target="_blank"
-                className="leading-none hover:text-black duration-300"
+                className={`leading-tight hover:text-black duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
               >
-                Hong Kong Office<br />
-                Suites 1901,<br />
-                Level 19, Cheung Kong Center,<br />
-                2 Queen’s Road Central, Central, Hong Kong<br />
+                {displayText["hongKongAddress"][language]}
               </a>
               <br />
               <a
                 href="#"
                 target="_blank"
-                className="leading-none hover:text-black duration-300"
+                className={`leading-tight hover:text-black duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
               >
-                Cayman Office<br />
-                190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands
+                {displayText["caymanAddress"][language]}
               </a>
             </div>
             <Clock className="text-4xl absolute bottom-[-2.1rem] md:relative md:text-[2.5vw] md:-bottom-2 xl:text-[1.5vw]" />
@@ -67,7 +80,9 @@ export default function IntroSection({ toggleLanguage }) {
         </aside>
         <aside className="flex justify-end w-1/2 h-full p-[4vw] bg-beige z-20">
           <ul className="leading-none text-right">
-            <li>Contact</li>
+            <li className={`duration-300 ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
+              {displayText["contact"][language]}
+            </li>
             <li>
               <a href="tel:+85234695185"
                 target="_blank"

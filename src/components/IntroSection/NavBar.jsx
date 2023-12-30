@@ -6,8 +6,26 @@ import navPlus from '../../assets/icons/nav_plus.png';
 import navMinus from '../../assets/icons/nav_minus.png';
 import Clock from "./Clock";
 
-export default function NavBar({ toggleLanguage }) {
-  const { language, isChangingLanguage } = useContext(LanguageContext);
+const displayText = {
+  about: {
+    0: "About",
+    1: "关于",
+    2: "關於"
+  },
+  contact: {
+    0: "Contact",
+    1: "联系",
+    2: "聯繫"
+  },
+  language: {
+    0: "EN",
+    1: "简",
+    2: "繁"
+  }
+}
+
+export default function NavBar() {
+  const { language, isChangingLanguage, cycleLanguage } = useContext(LanguageContext);
   const [ hoverLogo, setHoverLogo ] = useState(false);
   const [ bigmode, setBigmode ] = useState(window.matchMedia("(min-width: 640px)").matches);
   const [ hoverToggle, setHoverToggle ] = useState(false);
@@ -64,21 +82,21 @@ export default function NavBar({ toggleLanguage }) {
             ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
             onClick={() => scrollTo("about-section")}
           >
-            {language === 0 ? "关于" : "About"}
+            {displayText['about'][language]}
           </button>
           <button
             className={`hover:text-beige duration-300 uppercase
             ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
             onClick={() => scrollTo("contact-section")}
           >
-            {language === 0 ? "联系" : "Contact"}
+            {displayText['contact'][language]}
           </button>
           <button
             className={`hover:text-beige duration-300 uppercase
             ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
-            onClick={toggleLanguage}
+            onClick={cycleLanguage}
           >
-            {language === 0 ? "EN" : "中文"}
+            {displayText['language'][language]}
           </button>
         </div>}
         {!bigmode && <div
@@ -102,7 +120,7 @@ export default function NavBar({ toggleLanguage }) {
         style={{ opacity: showMenu ? 1 : 0, visibility: showMenu ? "visible" : "hidden" }}
       >
           <div
-            className={`text-6xl text-beige cursor-pointer mb-16 border
+            className={`text-6xl text-beige cursor-pointer mb-16
             hover:text-black duration-300 uppercase
             ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
             onClick={() => {
@@ -110,10 +128,10 @@ export default function NavBar({ toggleLanguage }) {
               setMenu(false);
             }}
           >
-            {language === 0 ? "关于" : "About Red Bridge"}
+            {displayText['about'][language]}
           </div>
           <div
-            className={`text-6xl text-beige cursor-pointer mb-16 border
+            className={`text-6xl text-beige cursor-pointer mb-16
             hover:text-black duration-300 uppercase
             ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
             onClick={() => {
@@ -121,15 +139,15 @@ export default function NavBar({ toggleLanguage }) {
               setMenu(false);
             }}
           >
-            {language === 0 ? "联系" : "Contact Red Bridge"}
+            {displayText['contact'][language]}
           </div>
           <div
-            className={`text-6xl text-beige cursor-pointer mb-16 border
+            className={`text-6xl text-beige cursor-pointer mb-16
             hover:text-black duration-300 uppercase
             ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
-            onClick={toggleLanguage}
+            onClick={cycleLanguage}
           >
-            {language === 0 ? "EN" : "中文"}
+            {displayText['language'][language]}
           </div>
           <Clock className="text-4xl text-beige" />
       </div>}

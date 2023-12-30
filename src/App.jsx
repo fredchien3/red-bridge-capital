@@ -11,8 +11,9 @@ export const LanguageContext = createContext();
 function App() {
   const [language, setLanguage] = useState(parseInt(localStorage.getItem("language")) || 0);
   const [isChangingLanguage, setIsChangingLanguage] = useState(false);
-  // 0 - Chinese
-  // 1 - English
+  // 0 - English
+  // 1 - Simplified Chinese
+  // 2 - Traditional Chinese
 
   useEffect(() => {
     sessionStorage.setItem("visited", "true");
@@ -22,9 +23,8 @@ function App() {
     setIsChangingLanguage(false);
   }, [language]);
 
-  function toggleLanguage() {
-    const prevLanguage = language;
-    const nextLanguage = prevLanguage === 0 ? 1 : 0;
+  function cycleLanguage() {
+    const nextLanguage = (language + 1) % 3;
     setIsChangingLanguage(true);
     setTimeout(() => {
       setLanguage(nextLanguage);
@@ -35,10 +35,10 @@ function App() {
 
   return (
     <ParallaxProvider>
-      <LanguageContext.Provider value={{language, isChangingLanguage}}>
+      <LanguageContext.Provider value={{language, isChangingLanguage, cycleLanguage}}>
         <div className="w-full h-screen font-ss">
           { sessionStorage.getItem("visited") === "true" ? <></> : <IntroAnimation />}
-          <IntroSection toggleLanguage={toggleLanguage}/>
+          <IntroSection />
           <AboutSection />
           <ContactSection />
           <FooterSection />

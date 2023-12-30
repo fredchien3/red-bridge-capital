@@ -1,13 +1,26 @@
 import Carousel from "./Carousel";
+import { useContext } from "react";
+import { LanguageContext } from "../../App";
+
+const displayText = {
+  about: {
+    0: "About\nRed Bridge",
+    1: "关于红桥",
+    2: "關於紅橋"
+  },
+}
 
 export default function AboutSection() {
+  const { language, isChangingLanguage } = useContext(LanguageContext);
+
   return (
     <section id="about-section" className="w-full h-auto md:h-full flex flex-col md:flex-row justify-between relative z-10">
       <Carousel />
       <aside className="w-full md:w-1/2 h-3/4 sm:h-2/3 md:h-full bg-white flex flex-col
       pt-[10vw] md:pt-0 pl-[6vw] md:pl-[4vw] pb-[10vw] 2xl:pb-[3vw] text-slate">
-        <h1 className="font-ssm uppercase text-[12vw] sm:text-[7vw] leading-none mb-[6vw] sm:mb-[2vw]">
-          About<br />Red Bridge
+        <h1 className={`font-ssm uppercase text-[12vw] sm:text-[7vw] leading-none mb-[6vw] sm:mb-[2vw] whitespace-pre-wrap
+          duration-300 ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
+          {displayText["about"][language]}
         </h1>
         <p className="w-[90%] leading-snug text-[3vw] md:text-[1.55vw] lg:text-[0.9vw] 2xl:text-xl mb-[2vw]">
           Red Bridge Capital is a Hong Kong-based investment firm with a strong focus on China. We have built a diverse portfolio of investment vehicles and strategies, driven by a history of success in various sectors, reflecting our unwavering commitment to delivering outstanding results for our investors.
