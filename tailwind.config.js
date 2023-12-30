@@ -17,6 +17,11 @@ export default {
         slate: '#333333',
         jade: '#003835',
       },
+      boxShadow: {
+        'topScroll': 'inset 0 12px 8px -5px rgb(200 200 200)',
+        'betweenScroll': 'inset 0 12px 8px -5px rgb(200 200 200), inset 0 -12px 8px -5px rgb(150 150 150)',
+        'bottomScroll': 'inset 0 -12px 8px -5px rgb(150 150 150)'
+      }
     },
   },
   plugins: [],
