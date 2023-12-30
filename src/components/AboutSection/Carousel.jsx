@@ -5,7 +5,7 @@ import nubEmpty from "../../assets/icons/nub_empty.png";
 import { useEffect, useState } from "react";
 import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 
-export default function Carousel() {
+export default function Carousel({ className }) {
   const images = [ifc, clouds];
   const [index, setIndex] = useState(0);
    
@@ -42,7 +42,7 @@ export default function Carousel() {
   }, [])
   
   return (
-    <div className="w-full md:w-1/2 h-96 md:h-full relative -z-30 overflow-hidden">
+    <div className={className}>
       <Parallax
         speed={-15}
         scale={[1.5, 1.5]}
