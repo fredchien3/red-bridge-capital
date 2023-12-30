@@ -16,9 +16,9 @@ export default function AboutSection() {
   return (
     <section id="about-section" className="w-full h-auto md:h-full flex flex-col md:flex-row justify-between relative z-10">
       <Carousel />
-      <aside className="w-full md:w-1/2 h-3/4 sm:h-2/3 md:h-full bg-white flex flex-col
+      <aside className="w-full md:w-1/2 h-3/4 sm:h-2/3 md:h-full bg-beige flex flex-col
       pt-[10vw] md:pt-0 pl-[6vw] md:pl-[4vw] pb-[10vw] 2xl:pb-[3vw] text-slate">
-        <h1 className={`font-ssm uppercase text-[12vw] sm:text-[7vw] leading-none mb-[6vw] sm:mb-[2vw] whitespace-pre-wrap
+        <h1 className={`font-ssm uppercase text-[12vw] sm:text-[5vw] leading-none mb-[6vw] sm:mb-[2vw] whitespace-pre-wrap
           duration-300 ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
           {displayText["about"][language]}
         </h1>

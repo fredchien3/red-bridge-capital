@@ -51,10 +51,10 @@ export default function IntroSection() {
           </h1>
         </ParallaxBanner>
       </header>
-      <section className="flex justify-between h-[28%] sm:h-1/2 text-[3vw] md:text-[2.5vw] xl:text-[1.5vw]">
-        <aside className="flex flex-col justify-between w-1/2 h-full p-[4vw] bg-maroon text-white z-20">
+      <section className="flex justify-between h-72 md:h-80 xl:h-[24rem] text-sm md:text-base xl:text-xl 2xl:text-2xl">
+        <aside className="flex flex-col justify-between w-1/2 h-full p-[4vw] xl:p-[3vw] bg-maroon text-white z-20">
           <div className="relative flex flex-col justify-between items-start h-full w-full
-          md:flex-row md:h-auto md:items-end">
+          2xl:flex-row 2xl:h-auto 2xl:items-end">
             <div className="flex flex-col">
               <a
                 href="#"
@@ -72,13 +72,13 @@ export default function IntroSection() {
                 {displayText["caymanAddress"][language]}
               </a>
             </div>
-            <Clock className="text-4xl absolute bottom-[-2.1rem] md:relative md:text-[2.5vw] md:-bottom-2 xl:text-[1.5vw]" />
+            <Clock className="absolute bottom-[-2.1rem] 2xl:-bottom-2 text-4xl 2xl:relative 2xl:text-[1.5vw]" />
           </div>
-          <div className="flex justify-end items-end w-full relative">
+          <div className="flex justify-end items-end w-full relative 2xl:mt-8">
             <img src={arrowDown} className="floating-arrow h-7 sm:h-11" onClick={scrollDown} />
           </div>
         </aside>
-        <aside className="flex justify-end w-1/2 h-full p-[4vw] bg-beige z-20">
+        <aside className="flex justify-end w-1/2 h-full p-[4vw] xl:p-[3vw] bg-beige z-20">
           <ul className="leading-none text-right">
             <li className={`duration-300 ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
               {displayText["contact"][language]}
