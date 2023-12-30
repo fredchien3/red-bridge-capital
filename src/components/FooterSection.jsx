@@ -36,7 +36,7 @@ export default function FooterSection() {
               target="_blank"
               className="leading-none hover:text-maroon duration-300 whitespace-pre-wrap"
             >
-              {"190 Eigin Avenue,\nGeorge Town,Grand Cayman\nKY1-9008, Cayman Islands"}
+              {"190 Elgin Avenue,\nGeorge Town,Grand Cayman\nKY1-9008, Cayman Islands"}
             </a>
           </aside>
           <aside className="flex justify-between flex-col h-[30vw] lg:h-[20vw] xl:h-auto xl:flex-row items-end">

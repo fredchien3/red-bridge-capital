@@ -12,15 +12,25 @@ const displayText = {
     1: "立足香港 , 背靠岭南 , 眼向世界",
     2: "立足香港 , 背靠嶺南 , 眼向世界"
   },
+  hongKongLabel: {
+    0: "Hong Kong Office",
+    1: "香港办公室",
+    2: "香港辦公室"
+  },
   hongKongAddress: {
-    0: "Hong Kong Office\nSuites 1901,\nLevel 19, Cheung Kong Center,\n2 Queen’s Road Central, Central, Hong Kong",
-    1: "香港办公室\n香港中环皇后大道中2号长江集团中心19楼1901室",
-    2: "香港辦公室\n香港中環皇后大道中2號長江集團中心19樓1901室"
+    0: "Suites 1901,\nLevel 19, Cheung Kong Center,\n2 Queen’s Road Central, Central, Hong Kong",
+    1: "香港中环皇后大道中2号长江集团中心19楼1901室",
+    2: "香港中環皇后大道中2號長江集團中心19樓1901室"
+  },
+  caymanLabel: {
+    0: "Cayman Office",
+    1: "开曼群岛办公",
+    2: "開曼群島辦公"
   },
   caymanAddress: {
-    0: "Cayman Office\n190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands",
-    1: "开曼群岛办公室\n190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands",
-    2: "開曼群島辦公室\n190 Eigin Avenue, George Town, Grand Cayman KY1-9008, Cayman Islands"
+    0: "190 Elgin Avenue, George Town,\nGrand Cayman KY1-9008, Cayman Islands",
+    1: "190 Elgin Avenue, George Town,\nGrand Cayman KY1-9008, Cayman Islands",
+    2: "190 Elgin Avenue, George Town,\nGrand Cayman KY1-9008, Cayman Islands"
   },
   contact: {
     0: "Contact",
@@ -51,28 +61,34 @@ export default function IntroSection() {
           </h1>
         </ParallaxBanner>
       </header>
-      <section className="flex justify-between h-72 md:h-80 xl:h-[24rem] text-sm md:text-base xl:text-xl 2xl:text-2xl">
+      <section className="flex justify-between h-72 md:h-80 xl:h-[24rem] 2xl:h-[28rem] text-sm md:text-base xl:text-xl 2xl:text-2xl">
         <aside className="flex flex-col justify-between w-1/2 h-full p-[4vw] xl:p-[3vw] bg-maroon text-white z-20">
           <div className="relative flex flex-col justify-between items-start h-full w-full
           2xl:flex-row 2xl:h-auto 2xl:items-end">
             <div className="flex flex-col">
+              <p className={`duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
+                {displayText["hongKongLabel"][language]}
+              </p>
               <a
-                href="#"
+                href="https://maps.app.goo.gl/W4WV5XatwFXKbLQ29"
                 target="_blank"
                 className={`leading-tight hover:text-black duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
               >
                 {displayText["hongKongAddress"][language]}
               </a>
               <br />
+              <p className={`duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
+                {displayText["caymanLabel"][language]}
+              </p>
               <a
-                href="#"
+                href="https://maps.app.goo.gl/V8BcTVr5KPZyvFyFA"
                 target="_blank"
                 className={`leading-tight hover:text-black duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
               >
                 {displayText["caymanAddress"][language]}
               </a>
             </div>
-            <Clock className="absolute bottom-[-2.1rem] 2xl:-bottom-2 text-4xl 2xl:relative 2xl:text-[1.5vw]" />
+            <Clock className="absolute text-left bottom-[-2.1rem] 2xl:-bottom-2 text-4xl 2xl:relative 2xl:text-[1.5vw] 2xl:w-[6vw]" />
           </div>
           <div className="flex justify-end items-end w-full relative 2xl:mt-8">
             <img src={arrowDown} className="floating-arrow h-7 sm:h-11" onClick={scrollDown} />
