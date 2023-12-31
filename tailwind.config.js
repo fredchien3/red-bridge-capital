@@ -6,9 +6,10 @@ export default {
   ],
   theme: {
     fontFamily: {
-      ss: 'AauxProRegular, sans-serif',
-      ssm: 'AauxProMedium, sans-serif',
-      serif: 'NotoSerifMedium, serif',
+      body: 'body, sans-serif',
+      header: 'header, sans-serif',
+      tc: 'tc, serif',
+      sc: 'sc, serif',
     },
     extend: {
       colors: {
@@ -20,7 +21,7 @@ export default {
       boxShadow: {
         'topScroll': 'inset 0 12px 8px -5px rgb(200 200 200)',
         'betweenScroll': 'inset 0 12px 8px -5px rgb(200 200 200), inset 0 -12px 8px -5px rgb(150 150 150)',
-        'bottomScroll': 'inset 0 -12px 8px -5px rgb(150 150 150)'
+        'bottomScroll': 'inset 0 -12px 8px -5px rgb(150 150 150)',
       }
     },
   },

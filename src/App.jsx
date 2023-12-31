@@ -1,6 +1,6 @@
 import { ParallaxProvider } from "react-scroll-parallax"
 import AboutSection from "./components/AboutSection/AboutSection"
-import ContactSection from "./components/ContactSection"
+import ContactSection from "./components/ContactSection/ContactSection"
 import FooterSection from "./components/FooterSection"
 import IntroSection from "./components/IntroSection/IntroSection"
 import IntroAnimation from "./components/IntroAnimation"
@@ -36,7 +36,7 @@ function App() {
   return (
     <ParallaxProvider>
       <LanguageContext.Provider value={{language, isChangingLanguage, cycleLanguage}}>
-        <div className="w-full h-screen font-ss">
+        <div className="w-full h-screen font-body">
           { sessionStorage.getItem("visited") === "true" ? <></> : <IntroAnimation />}
           <IntroSection />
           <AboutSection />

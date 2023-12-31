@@ -3,18 +3,23 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'AauxProRegular';
+  font-family: 'body';
   src: url(./assets/fonts/AauxProRegular.ttf);
 }
 
 @font-face {
-  font-family: 'AauxProMedium';
+  font-family: 'header';
   src: url(./assets/fonts/AauxProMedium.ttf);
 }
 
 @font-face {
-  font-family: 'NotoSerifMedium';
-  src: url(./assets/fonts/NotoSerifMedium.ttf);
+  font-family: 'tc';
+  src: url(./assets/fonts/NotoSerifTC-Regular.otf);
+}
+
+@font-face {
+  font-family: 'sc';
+  src: url(./assets/fonts/NotoSerifSC-Regular.otf);
 }
 
 .floating-arrow { 

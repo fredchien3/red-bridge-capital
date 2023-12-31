@@ -5,39 +5,9 @@ import arrowDown from "../../assets/icons/arrow_down.png"
 import { ParallaxBanner } from "react-scroll-parallax";
 import { useContext } from "react";
 import { LanguageContext } from "../../App";
+import displayText from "./displayText.json";
+import headerFont from "../headerFont.json";
 
-const displayText = {
-  hero: {
-    0: "Based in Hong Kong,\nour global expansion\nstems from deep roots in China.",
-    1: "立足香港 , 背靠岭南 , 眼向世界",
-    2: "立足香港 , 背靠嶺南 , 眼向世界"
-  },
-  hongKongLabel: {
-    0: "Hong Kong Office",
-    1: "香港办公室",
-    2: "香港辦公室"
-  },
-  hongKongAddress: {
-    0: "Suites 1901,\nLevel 19, Cheung Kong Center,\n2 Queen’s Road Central, Central, Hong Kong",
-    1: "香港中环皇后大道中2号长江集团中心19楼1901室",
-    2: "香港中環皇后大道中2號長江集團中心19樓1901室"
-  },
-  caymanLabel: {
-    0: "Cayman Office",
-    1: "开曼群岛办公",
-    2: "開曼群島辦公"
-  },
-  caymanAddress: {
-    0: "190 Elgin Avenue, George Town,\nGrand Cayman KY1-9008, Cayman Islands",
-    1: "190 Elgin Avenue, George Town,\nGrand Cayman KY1-9008, Cayman Islands",
-    2: "190 Elgin Avenue, George Town,\nGrand Cayman KY1-9008, Cayman Islands"
-  },
-  contact: {
-    0: "Contact",
-    1: "联系",
-    2: "聯繫"
-  }
-}
 
 export default function IntroSection() {
   const { language, isChangingLanguage } = useContext(LanguageContext);
@@ -54,9 +24,8 @@ export default function IntroSection() {
           layers={[{ image: wall, speed: -15 }]}
           className="w-full h-full absolute object-cover z-10"
         >
-          <h1 className={`absolute uppercase text-white transition-opacity duration-300 ease-in-out
-          text-[5vw] left-[3vw] bottom-[3vw] leading-none whitespace-pre-wrap
-          ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
+          <h1 className={`absolute uppercase text-white text-[5vw] left-[3vw] bottom-[3vw] leading-none
+          ${headerFont[language]} whitespace-pre-wrap duration-300 ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
             {displayText["hero"][language]}
           </h1>
         </ParallaxBanner>

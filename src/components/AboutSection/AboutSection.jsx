@@ -1,14 +1,8 @@
 import Carousel from "./Carousel";
 import { useContext, useState } from "react";
 import { LanguageContext } from "../../App";
-
-const displayText = {
-  about: {
-    0: "About\nRed Bridge",
-    1: "关于红桥",
-    2: "關於紅橋"
-  },
-}
+import displayText from "./displayText.json";
+import headerFont from "../headerFont.json";
 
 export default function AboutSection() {
   const { language, isChangingLanguage } = useContext(LanguageContext);
@@ -40,15 +34,15 @@ export default function AboutSection() {
           xl:w-1/2 xl:h-full xl:pt-[4vw] xl:pb-[2vw] xl:p-[4vw] xl:overflow-scroll xl:overflow-x-hidden ${getBoxShadow()}`}
         onScroll={handleScroll}
       >
-        <h1 className={`font-ssm uppercase text-[12vw] sm:text-[5vw] mb-[6vw] sm:mb-[2vw] leading-tight
-          whitespace-pre-wrap duration-300 ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
+        <h1 className={`font-header uppercase text-[12vw] sm:text-[5vw] mb-[6vw] sm:mb-[3vw] leading-tight
+          ${headerFont[language]} whitespace-pre-wrap duration-300 ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
         >
           {displayText["about"][language]}
         </h1>
         <p className="mb-[2vw] text-lg md:text-xl lg:text-2xl">
           Red Bridge Capital is a Hong Kong-based investment firm with a strong focus on China. We have built a diverse portfolio of investment vehicles and strategies, driven by a history of success in various sectors, reflecting our unwavering commitment to delivering outstanding results for our investors.
         </p>
-        <h2 className="font-ssm uppercase leading-none mt-[2vw] mb-[2vw] text-2xl sm:text-3xl md:text-4xl">
+        <h2 className="font-header uppercase leading-none mt-[2vw] mb-[2vw] text-2xl sm:text-3xl md:text-4xl">
           Our Approach
         </h2>
         <p className="mb-[2vw] text-lg md:text-xl lg:text-2xl">
@@ -57,13 +51,13 @@ export default function AboutSection() {
         <p className="mb-[2vw] text-lg md:text-xl lg:text-2xl">
           We go beyond traditional investment management. We actively engage in the companies we invest in, drawing on our expertise and experiences, as well as the collaborative synergy with our investors, to foster mutual growth.
         </p>
-        <h2 className="font-ssm uppercase leading-none mt-[2vw] mb-[2vw] text-2xl sm:text-3xl md:text-4xl">
+        <h2 className="font-header uppercase leading-none mt-[2vw] mb-[2vw] text-2xl sm:text-3xl md:text-4xl">
           Bridging Connections
         </h2>
         <p className="mb-[2vw] text-lg md:text-xl lg:text-2xl">
           More than just investment managers, we are bridge builders. Our leadership team's international background, rooted in Hong Kong, equips us to seamlessly facilitate companies' transition in and out of China, transcending barriers and fostering global connections.
         </p>
-        <h2 className="font-ssm uppercase leading-none mt-[2vw] mb-[2vw] text-2xl sm:text-3xl md:text-4xl">
+        <h2 className="font-header uppercase leading-none mt-[2vw] mb-[2vw] text-2xl sm:text-3xl md:text-4xl">
           Our Fundamental Values
         </h2>
         <p className="mb-[2vw] text-lg md:text-xl lg:text-2xl">
