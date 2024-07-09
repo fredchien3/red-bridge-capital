@@ -36,17 +36,6 @@ export default function IntroSection() {
           2xl:flex-row 2xl:h-auto 2xl:items-end">
             <div className="flex flex-col">
               <p className={`duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
-                {displayText["hongKongLabel"][language]}
-              </p>
-              <a
-                href="https://maps.app.goo.gl/W4WV5XatwFXKbLQ29"
-                target="_blank"
-                className={`leading-tight hover:text-black duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}
-              >
-                {displayText["hongKongAddress"][language]}
-              </a>
-              <br />
-              <p className={`duration-300 whitespace-pre-wrap ${isChangingLanguage ? 'opacity-0' : 'opacity-100'}`}>
                 {displayText["caymanLabel"][language]}
               </p>
               <a
