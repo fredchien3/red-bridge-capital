@@ -7,11 +7,13 @@ export default function FooterSection() {
   const scrollUp = () => {
     document.getElementById("nav").scrollIntoView({ behavior: 'smooth' });
   };
-  
+
+  const year = new Date().getFullYear();
+
   return (
     <>
       <section className="w-full h-96 md:h-[95vh] relative flex z-10">
-        <ParallaxBanner 
+        <ParallaxBanner
           layers={[{ image: city, speed: -15 }]}
           className="h-full"
         />
@@ -59,7 +61,7 @@ export default function FooterSection() {
                   </a>
               </li>
             </ul>
-            <p>Copyright © 2023<br />Red Bridge Capital</p>
+            <p>Copyright © {year}<br />Red Bridge Capital</p>
           </aside>
         </div>
       </footer>
