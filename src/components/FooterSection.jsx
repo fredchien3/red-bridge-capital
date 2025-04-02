@@ -58,7 +58,7 @@ export default function FooterSection() {
                   className="hover:text-maroon duration-300"
                 >
                   admin@redbridgecapital.com
-                  </a>
+                </a>
               </li>
             </ul>
             <p>Copyright © {year}<br />Red Bridge Capital</p>
